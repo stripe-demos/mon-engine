@@ -290,6 +290,133 @@ body {
   background-color: #14171d;
 }
 
+/* Forces the light-mode palette within a subtree regardless of an ancestor
+   .dark class — used to keep the Context results panel light even when the
+   conversation panel next to it is intentionally scoped dark. */
+.force-light {
+  --color-neutral-0: #ffffff;
+  --color-neutral-25: #F4F7FA;
+  --color-neutral-50: #ECF1F6;
+  --color-neutral-100: #D4DEE9;
+  --color-neutral-200: #BAC8DA;
+  --color-neutral-300: #95A4BA;
+  --color-neutral-400: #7D8BA4;
+  --color-neutral-500: #667691;
+  --color-neutral-600: #50617A;
+  --color-neutral-700: #3C4F69;
+  --color-neutral-800: #273951;
+  --color-neutral-900: #1A2C44;
+
+  --color-brand-0: #ffffff;
+  --color-brand-25: #f7f5fd;
+  --color-brand-50: #efecfc;
+  --color-brand-100: #e0d9fb;
+  --color-brand-200: #c3b6fb;
+  --color-brand-300: #a497fc;
+  --color-brand-400: #857afe;
+  --color-brand-500: #675dff;
+  --color-brand-600: #533afd;
+  --color-brand-700: #4e11e2;
+  --color-brand-800: #44139f;
+  --color-brand-900: #2f0e63;
+
+  --color-surface: #ffffff;
+  --color-offset: #F5F6F8;
+  --color-border: #D8DEE4;
+  --color-danger: #dc2626;
+  --color-overlay-backdrop: rgba(186, 200, 218, 0.7);
+
+  --color-default: #353A44;
+  --color-subdued: #596171;
+  --color-placeholder: #A1A8B7;
+  --color-brand: #533AFD;
+  --color-info: #045AD0;
+  --color-success: #217005;
+  --color-attention: #B13600;
+  --color-critical: #C0123C;
+
+  --color-icon-default: #474E5A;
+  --color-icon-subdued: #6C7688;
+  --color-icon-brand: #675DFF;
+  --color-icon-info: #0072E9;
+  --color-icon-success: #2B8700;
+  --color-icon-attention: #CC4B00;
+  --color-icon-critical: #E61947;
+
+  --color-button-primary-bg: #533afd;
+  --color-button-primary-border: #675DFF;
+  --color-button-primary-border-hover: #4E11E2;
+  --color-button-primary-text: #FFFFFF;
+  --color-button-primary-pressed: #533AFD;
+
+  --color-button-secondary-bg: #FFFFFF;
+  --color-button-secondary-border: #D8DEE4;
+  --color-button-secondary-border-hover: #99A5B8;
+  --color-button-secondary-text: #353A44;
+  --color-button-secondary-pressed: #F5F6F8;
+
+  --color-button-danger-bg: #E61947;
+  --color-button-danger-border: #E61947;
+  --color-button-danger-border-hover: #9B0C36;
+  --color-button-danger-text: #FFFFFF;
+  --color-button-danger-pressed: #C0123C;
+
+  --color-badge-default-bg: #F5F6F8;
+  --color-badge-default-border: #F5F6F8;
+  --color-badge-default-text: #596171;
+
+  --color-badge-success-bg: #EAFCDD;
+  --color-badge-success-border: #EAFCDD;
+  --color-badge-success-text: #217005;
+
+  --color-badge-warning-bg: #FDF8C9;
+  --color-badge-warning-border: #FDF8C9;
+  --color-badge-warning-text: #B13600;
+
+  --color-badge-danger-bg: #FEF4F6;
+  --color-badge-danger-border: #FEF4F6;
+  --color-badge-danger-text: #C0123C;
+
+  --color-badge-info-bg: #E2FBFE;
+  --color-badge-info-border: #E2FBFE;
+  --color-badge-info-text: #045AD0;
+
+  --color-tooltip-surface: #ffffff;
+  --color-tooltip-border: #D8DEE4;
+  --color-tooltip-label-bg: #3C4F69;
+  --color-tooltip-label-text: #ffffff;
+
+  --color-icon-button-text: #9ca3af;
+  --color-icon-button-hover-text: #4b5563;
+  --color-icon-button-hover-bg: #f3f4f6;
+}
+
+@keyframes fadeInStep {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 /* Hide scrollbar while still allowing scroll */
 .scrollbar-hide {
   -ms-overflow-style: none;

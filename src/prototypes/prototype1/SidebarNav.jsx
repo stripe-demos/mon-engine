@@ -30,7 +30,9 @@ export default function SidebarNav() {
 
       {/* Main Navigation */}
       <div className="">
-        <NavItem icon={<Icon name="home" size="small" fill="currentColor" />} label="Home" to="" active={isActive('')} />
+        <NavItem icon={<Icon name="growth" size="small" fill="currentColor" />} label="Context" to="" active={isActive('')} />
+        <NavItem icon={<Icon name="lab" size="small" fill="currentColor" />} label="Test and iterate" to="test-and-iterate" active={isActive('test-and-iterate')} />
+        <NavItem icon={<Icon name="code" size="small" fill="currentColor" />} label="Update your code" to="update-your-code" active={isActive('update-your-code')} />
         <NavItem icon={<Icon name="balance" size="small" fill="currentColor" />} label="Balances" to="balances" active={isActive('balances')} />
         <NavItem icon={<Icon name="arrowsLoop" size="small" fill="currentColor" />} label="Transactions" />
         <NavItem icon={<Icon name="person" size="small" fill="currentColor" />} label="Network" />
